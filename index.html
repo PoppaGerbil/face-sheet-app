@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABA Face Sheet Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guided Face Sheet Questionnaire</h1>
+
+    <form id="faceSheetForm">
+        <h2>Identity & Contacts</h2>
+        <label>Client’s name (FiLa):</label><input type="text" name="name">
+        <label>Date of Birth:</label><input type="date" name="dob">
+        <label>Arrival Time:</label><input type="time" name="arrive">
+        <label>Departure Time:</label><input type="time" name="leave">
+        <label>Authorized Pickup:</label><input type="text" name="pickup">
+
+        <h2>Medical Snapshot</h2>
+        <label>Allergies / Sensitivities:</label><textarea name="allergies"></textarea>
+        <label>Medications during session?</label><input type="text" name="meds">
+        <label>Comorbidities:</label><textarea name="comorbidities"></textarea>
+
+        <h2>Communication Profile</h2>
+        <label>Primary Modalities:</label><input type="text" name="modalities">
+        <label>AAC Details:</label><textarea name="aac_details"></textarea>
+
+        <h2>Behavior Targets</h2>
+        <label>Top priority behaviors to reduce:</label><textarea name="behaviors"></textarea>
+
+        <h2>Session Logistics</h2>
+        <label>Materials Needed:</label><textarea name="materials"></textarea>
+        <label>Anything else we should know?</label><textarea name="closing"></textarea>
+
+        <button type="button" onclick="generatePDF()">Generate PDF</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
